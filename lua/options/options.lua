@@ -9,6 +9,11 @@ vim.o.tabstop = 4
 -- Clipboard integration
 vim.o.clipboard = "unnamedplus"
 
+-- Display 80 character column, and limit text width to that column.
+vim.o.colorcolumn = "80"
+vim.o.textwidth = 80
+
+
 vim.g.have_nerd_font = true
 vim.o.mouse = 'a'
 vim.o.breakindent = true
