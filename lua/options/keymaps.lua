@@ -1,0 +1,19 @@
+-- Telescope
+local telescope = require("telescope.builtin")
+vim.keymap.set("n", "<leader>ff", telescope.find_files, { desc = "Search for files (Telescope)" })
+vim.keymap.set("n", "<leader>fg", telescope.live_grep, { desc = "Search for words in files (Telescope)" })
+
+-- Neotree
+vim.keymap.set("n", "<C-n>", "<cmd>:Neotree toggle position=left<cr>", { desc = "Toggle directory tre (Neotree)" })
+
+-- Remap line commenting from gc to <leader> /
+vim.keymap.set("v", "<leader>/", "gc", { remap = true, silent = true, desc = "Comment line/lines" })
+
+-- Run the run.bat file in the current directory
+vim.keymap.set("n", "<leader>!", "<cmd>:!run.bat<cr>", { desc = "Run the run.bat in the current directory" })
+
+-- Display errors and warnings
+vim.keymap.set("n", "<leader>e", "<C-w>d", { remap = true, desc = "Display errors and warnings" })
+
+-- Stop highlighting search
+vim.keymap.set("n", "<ESC>", "<cmd>noh<cr>", { desc = "Unhighlight search" })
