@@ -4,6 +4,7 @@
 local telescope = require("telescope.builtin")
 vim.keymap.set("n", "<leader>ff", telescope.find_files, { desc = "Search for files (Telescope)" })
 vim.keymap.set("n", "<leader>fw", telescope.live_grep, { desc = "Search for words in files (Telescope)" })
+vim.keymap.set("n", "<leader>fb", telescope.buffers, { desc = "Search for buffers (Telescope)" })
 
 -- Neotree
 vim.keymap.set("n", "<C-n>", "<cmd>:Neotree toggle position=left<cr>", { desc = "Toggle directory tre (Neotree)" })
