@@ -23,7 +23,7 @@ return {
 
   config = function()
     require('mason-lspconfig').setup {
-      ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
+      ensure_installed = { "jdtls" }, 
       automatic_installation = false
     }
   end,
