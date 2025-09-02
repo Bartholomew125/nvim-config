@@ -21,4 +21,4 @@ vim.o.undofile = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.confirm = true
-vim.o.updatetime = 250
+vim.o.updatetime = 100
