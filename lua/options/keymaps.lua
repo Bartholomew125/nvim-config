@@ -20,3 +20,9 @@ vim.keymap.set("n", "<leader>e", "<C-w>d", { remap = true, desc = "Display error
 
 -- Stop highlighting search
 vim.keymap.set("n", "<ESC>", "<cmd>noh<cr>", { desc = "Unhighlight search" })
+
+-- LSP
+vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<cr>", { desc = "Go to definition" })
+
+-- Terminal
+vim.keymap.set("t", "<ESC>", "<C-\\><C-n>")
