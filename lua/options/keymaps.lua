@@ -25,10 +25,13 @@ vim.keymap.set("n", "<ESC>", "<cmd>noh<cr>", { desc = "Unhighlight search" })
 vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<cr>", { desc = "Go to definition" })
 
 -- Terminal
-vim.keymap.set("t", "<ESC>", "<C-\\><C-n>")
+vim.keymap.set("t", "<ESC><ESC>", "<C-\\><C-n>")
 
 -- Window switching
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Go to left window" })
 vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Go to down window" })
 vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Go to up window" })
 vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Go to right window" })
+
+-- Toggle terminal lazygit
+vim.keymap.set("n", "<leader>g", "<cmd>lua _lazygit_toggle()<cr>", { desc = "Toggle lazygit terminal" })
