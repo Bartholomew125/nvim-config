@@ -35,3 +35,6 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Go to right window" })
 
 -- Toggle terminal lazygit
 vim.keymap.set("n", "<leader>g", "<cmd>lua _lazygit_toggle()<cr>", { desc = "Toggle lazygit terminal" })
+
+-- Toggle hex view
+vim.keymap.set("n", "<leader>hx", function() require("hex_reader").toggle() end, { desc = "Toggle hex reader" })
