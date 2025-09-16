@@ -1,5 +1,6 @@
 -- Line numbers
 vim.o.relativenumber = true
+vim.o.nu = true
 
 -- Indentation
 vim.o.expandtab = true
