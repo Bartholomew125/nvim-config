@@ -14,6 +14,10 @@ vim.o.clipboard = "unnamedplus"
 vim.o.colorcolumn = "80"
 vim.o.textwidth = 80
 
+vim.diagnostic.config({
+    underline = false
+})
+
 
 vim.g.have_nerd_font = true
 vim.o.mouse = 'a'
