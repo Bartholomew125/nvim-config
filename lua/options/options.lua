@@ -14,9 +14,13 @@ vim.o.clipboard = "unnamedplus"
 vim.o.colorcolumn = "80"
 vim.o.textwidth = 80
 
+-- Remove underlines from diagnostic messages
 vim.diagnostic.config({
     underline = false
 })
+
+-- Set signcolumn to static
+vim.o.signcolumn = "yes"
 
 
 vim.g.have_nerd_font = true
