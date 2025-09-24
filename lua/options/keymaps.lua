@@ -38,3 +38,6 @@ vim.keymap.set("n", "<leader>g", "<cmd>lua _lazygit_toggle()<cr>", { desc = "Tog
 
 -- Toggle hex view
 vim.keymap.set("n", "<leader>hx", function() require("hex_reader").toggle() end, { desc = "Toggle hex reader" })
+
+-- Faster write keybind
+vim.keymap.set("n", "<leader>w", "<cmd>:w<cr>", { desc = "Write the file" })
