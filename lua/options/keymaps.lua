@@ -39,5 +39,17 @@ vim.keymap.set("n", "<leader>g", "<cmd>lua _lazygit_toggle()<cr>", { desc = "Tog
 -- Toggle hex view
 vim.keymap.set("n", "<leader>hx", function() require("hex_reader").toggle() end, { desc = "Toggle hex reader" })
 
+
+-- Smart write function. Writes the current file, and compiles it if it is a tex
+-- file
+local function smart_write()
+    local current_file = vim.fn.expand('%:p')
+    local extension = vim.fn.expand('%:e')
+    vim.cmd("w")
+    if extension == "tex" then
+        vim.fn.jobstart({ "pdflatex", current_file })
+    end
+end
+
 -- Faster write keybind
-vim.keymap.set("n", "<leader>w", "<cmd>:w<cr>", { desc = "Write the file" })
+vim.keymap.set("n", "<leader>w", smart_write, { desc = "Write the file, and compile if .tex" })
