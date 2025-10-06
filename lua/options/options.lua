@@ -22,7 +22,7 @@ vim.diagnostic.config({
 -- Set signcolumn to static
 vim.o.signcolumn = "yes"
 
-vim.o.scrolloff = 8
+vim.o.scrolloff = 20
 
 
 vim.g.have_nerd_font = true
