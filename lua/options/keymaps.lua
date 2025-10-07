@@ -6,6 +6,22 @@ vim.keymap.set("n", "<leader>ff", telescope.find_files, { desc = "Search for fil
 vim.keymap.set("n", "<leader>fw", telescope.live_grep, { desc = "Search for words in files (Telescope)" })
 vim.keymap.set("n", "<leader>fb", telescope.buffers, { desc = "Search for buffers (Telescope)" })
 
+-- Set keybindings for opening seection in new tab
+local actions = require("telescope.actions")
+require("telescope").setup({
+  defaults = {
+    mappings = {
+      i = {
+        ["<S-CR>"] = actions.select_tab, -- insert mode
+      },
+      n = {
+        ["<S-CR>"] = actions.select_tab, -- normal mode inside Telescope
+      },
+    },
+  },
+})
+
+
 -- Neotree
 vim.keymap.set("n", "<C-n>", "<cmd>:Neotree toggle position=left<cr>", { desc = "Toggle directory tre (Neotree)" })
 
@@ -23,6 +39,7 @@ vim.keymap.set("n", "<ESC>", "<cmd>noh<cr>", { desc = "Unhighlight search" })
 
 -- LSP
 vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<cr>", { desc = "Go to definition" })
+vim.keymap.set("n", "<leader>d", "<cmd>lua vim.lsp.buf.hover()<cr>", { desc = "Show definition" })
 
 -- Terminal
 vim.keymap.set("t", "<ESC><ESC>", "<C-\\><C-n>")
@@ -56,3 +73,6 @@ vim.keymap.set("n", "<leader>w", smart_write, { desc = "Write the file, and comp
 
 vim.keymap.set("n", "<S-j>", "<cmd>m +1<cr>", { desc = "Move current line down" })
 vim.keymap.set("n", "<S-k>", "<cmd>m -2<cr>", { desc = "Move current line up" })
+
+vim.keymap.set("n", "<tab>", "<cmd>tabnext<cr>", { desc = "Go to next tab" })
+vim.keymap.set("n", "<S-tab>", "<cmd>tabnext -<cr>", { desc = "Go to previous tab" })
