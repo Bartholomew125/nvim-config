@@ -24,6 +24,8 @@ vim.o.signcolumn = "yes"
 
 vim.o.scrolloff = 20
 
+-- vim.opt.termguicolors = true
+
 
 vim.g.have_nerd_font = true
 vim.o.mouse = 'a'
