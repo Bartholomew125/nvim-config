@@ -64,6 +64,7 @@ local function smart_write()
     local extension = vim.fn.expand('%:e')
     vim.cmd("w")
     if extension == "tex" then
+        vim.cmd('echo "Compiling latex document"')
         vim.fn.jobstart({ "pdflatex", current_file })
     end
 end
