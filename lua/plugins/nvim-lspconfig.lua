@@ -23,7 +23,7 @@ return {
 
     config = function()
         require('mason-lspconfig').setup {
-            ensure_installed = { "jdtls" }, 
+            ensure_installed = { "jdtls", "basedpyright" }, 
             automatic_installation = false
         }
     end,
