@@ -5,6 +5,7 @@ local telescope = require("telescope.builtin")
 vim.keymap.set("n", "<leader>ff", telescope.find_files, { desc = "Search for files (Telescope)" })
 vim.keymap.set("n", "<leader>fw", telescope.live_grep, { desc = "Search for words in files (Telescope)" })
 vim.keymap.set("n", "<leader>fb", telescope.buffers, { desc = "Search for buffers (Telescope)" })
+vim.keymap.set("n", "<leader>fk", telescope.keymaps, { desc = "Search for keymaps (Telescope)" })
 
 -- Set keybindings for opening seection in new tab
 local actions = require("telescope.actions")
